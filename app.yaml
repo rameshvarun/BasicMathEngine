@@ -1,0 +1,42 @@
+application: basicmathengine
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /script
+  static_dir: script
+  
+- url: /images
+  static_dir: images
+  
+- url: /css
+  static_dir: css
+  
+- url: /css/ui-lightness
+  static_dir: css/ui-lightness
+  
+- url: /css/ui-lightness/images
+  static_dir: css/ui-lightness/images
+  
+- url: /js
+  static_dir: js
+  
+- url: .euler
+  script: euler.py
+  
+- url: .tp
+  script: tripleintegral.py
+  
+- url: .dfield
+  script: dfield.py
+  
+- url: .dmap
+  script: dmap.py
+  
+- url: .sandbox
+  script: sandbox.py
+ 
+- url: .*
+  script: basicmathengine.py
+  
